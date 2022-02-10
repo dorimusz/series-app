@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import http from 'axios';
 
-export default function App() {
+function App() {
   const [title, setTitle] = useState("")
   const [characters, setCharacters] = useState("")
   const [serieses, setSerieses] = useState([])
@@ -48,9 +48,11 @@ export default function App() {
             )
             )}
           </ul>
-          <button onClick={() => del()}>Delete</button>
+          <button onClick={() => del(series.id)}>Delete</button>
         </div>
       ))}
     </div>
   )
 }
+
+export default App;
